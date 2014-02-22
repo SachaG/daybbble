@@ -4,7 +4,7 @@ Template.grid.helpers({
   },
   date: function () {
     var d = new Date(this.timestamp);
-    return d.getHours()+":00";
+    return d.getHours()+":"+d.getMinutes();
   },
   shots: function () {
     return jQuery.parseJSON(this.content).shots;
