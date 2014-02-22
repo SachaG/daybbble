@@ -1,3 +1,13 @@
 <template name="grid">
-*grid goes here*
+  <div class="grid">
+    {{#each days}}
+      <div class="grid-day">
+        {{#each shots}}
+          <div class="grid-shot">
+            <img src="{{image_url}}" class="grid-image"/>
+          </div>
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
 </template>

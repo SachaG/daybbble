@@ -1,0 +1,18 @@
+body{
+  background: black;
+}
+
+.grid{
+  with:100%;
+  overflow: hidden;
+}
+
+.grid-day{
+  width: 4%;
+  float: left;
+}
+
+.grid-image{
+  width: 100%;
+  display: block;
+}
