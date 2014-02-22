@@ -29,21 +29,33 @@ h1{
 
 .grid-hour{
   width: 4%;
-  margin-left: 5px;
   float: right;
 }
 
 .grid-time{
   background: #333;
-  margin-bottom: 5px;
   font-weight: bold;
   text-align: center;
   padding: 5px;
   font-size: 13px;
+  margin: 0 5px 5px 0;
 }
 
 .grid-shot{
-  margin-bottom: 4px;
+}
+
+.grid-shot a{
+  display: block;
+  padding: 0 5px 5px 0;
+  -webkit-transition: all 300ms 0ms;
+}
+
+a.highlighted{
+  -webkit-transform: scale(1.2);
+}
+
+a.faded{
+  opacity: 0.25;
 }
 
 .grid-image{

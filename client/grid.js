@@ -10,3 +10,19 @@ Template.grid.helpers({
     return jQuery.parseJSON(this.content).shots;
   }
 })
+
+Template.grid.rendered = function () {
+  $('.grid-shot a').hover(function () {
+
+    var shotID = $(this).attr('data-id'),
+        shotsSelector = "a[data-id='"+shotID+"']";
+
+    $(".grid-shot a").addClass('faded');
+    $(shotsSelector).removeClass('faded').addClass('highlighted');
+
+  }, function(){
+
+    $('.grid-shot a').removeClass('faded highlighted');
+
+  });
+}
