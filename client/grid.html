@@ -1,10 +1,15 @@
 <template name="grid">
   <div class="grid">
     {{#each days}}
-      <div class="grid-day">
+      <div class="grid-hour">
+        <div class="grid-time">
+          {{date}}
+        </div>
         {{#each shots}}
           <div class="grid-shot">
-            <img src="{{image_teaser_url}}" class="grid-image"/>
+            <a href="{{url}}" target="_blank">
+              <img src="{{image_teaser_url}}" class="grid-image"/>
+            </a>
           </div>
         {{/each}}
       </div>

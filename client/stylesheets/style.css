@@ -1,5 +1,7 @@
 body{
   background: black;
+  color: white;
+  padding: 10px;
 }
 
 .grid{
@@ -7,10 +9,19 @@ body{
   overflow: hidden;
 }
 
-.grid-day{
+.grid-hour{
   width: 4%;
   margin-right: 4px;
   float: left;
+}
+
+.grid-time{
+  background: #333;
+  margin-bottom: 4px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
 }
 
 .grid-shot{
