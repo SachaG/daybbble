@@ -15,5 +15,5 @@ Meteor.methods({
 })
 
 Meteor.setInterval(function(){
-  // queryAPI();
+  queryAPI();
 }, 3600000);
