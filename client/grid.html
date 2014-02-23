@@ -9,13 +9,15 @@
         </div>
         {{#each shots}}
           <div class="grid-shot">
-            <a href="{{url}}" target="_blank" data-id="{{id}}">
+            <a href="{{url}}" target="_blank" data-id="{{id}}" data-full-url="{{image_url}}">
               <img src="{{image_teaser_url}}" class="grid-image"/>
               <span class="shot-likes">{{likes_count}}</span>
+              <span class="shot-likesPerHour">{{likesPerHour}}</span>
             </a>
           </div>
         {{/each}}
       </div>
     {{/each}}
   </div>
+  <img class="zoom-image" src=""/>
 </template>
