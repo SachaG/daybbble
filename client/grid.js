@@ -13,31 +13,17 @@ Template.grid.helpers({
     return Math.round(parseInt(this.likes_count)/diff);
   },
   shots: function () {
-    return jQuery.parseJSON(this.content).shots;
+    return _.first(jQuery.parseJSON(this.content).shots, SHOTS_NUMBER);
   }
 })
 
 Template.grid.rendered = function () {
   $('.grid-shot a').hover(function () {
-
     var shotID = $(this).attr('data-id'),
         shotsSelector = "a[data-id='"+shotID+"']";
-
     $(".grid-shot a").addClass('faded');
     $(shotsSelector).removeClass('faded').addClass('highlighted');
-
-    if($(this).offset().left > $(window).width()/2 ){
-      $('.zoom-image').addClass('offset');
-    }else{
-      $('.zoom-image').removeClass('offset')
-    }
-    
-    $('.zoom-image').addClass('visible').attr('src', $(this).attr('data-full-url'))
-
   }, function(){
-
     $('.grid-shot a').removeClass('faded highlighted');
-    $('.zoom-image').removeClass('visible');
-
   });
 }

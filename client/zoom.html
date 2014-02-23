@@ -1,0 +1,8 @@
+<template name="zoom">
+  {{#with zoomedShot}}
+    <div class="zoom-shot {{offsetClass}}">
+      <img class="zoom-image" src="{{image_url}}"/>
+      <p class="zoom-legend"><em>{{title}}</em> by {{player.name}}</p>
+    </div>
+  {{/with}}
+</template>

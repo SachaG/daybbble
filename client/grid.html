@@ -1,23 +1,18 @@
 <template name="grid">
   <h1>Daybbble</h1>
-  <p class="tagline">Taking snapshots of the <a href="http://dribbble.com" target="_blank">Dribbble</a> homepage every hour.</p>
+  <p class="tagline">Tracking the <a href="http://dribbble.com" target="_blank">Dribbble</a> homepage over the past 24 hours.</p>
   <div class="grid">
+    {{>legend}}
     {{#each hours}}
-      <div class="grid-hour">
-        <div class="grid-time">
+      <div class="grid-hour grid-col">
+        {{#each shots}}
+          {{> shot}}
+        {{/each}}
+        <div class="grid-time grid-cell">
           {{date}}
         </div>
-        {{#each shots}}
-          <div class="grid-shot">
-            <a href="{{url}}" target="_blank" data-id="{{id}}" data-full-url="{{image_url}}">
-              <img src="{{image_teaser_url}}" class="grid-image"/>
-              <span class="shot-likes">{{likes_count}}</span>
-              <span class="shot-likesPerHour">{{likesPerHour}}</span>
-            </a>
-          </div>
-        {{/each}}
       </div>
     {{/each}}
+    {{>legend}}
   </div>
-  <img class="zoom-image" src=""/>
 </template>
