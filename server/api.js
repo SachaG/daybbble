@@ -2,7 +2,7 @@ var queryAPI = function () {
   HTTP.get('http://api.dribbble.com/shots/popular?page=1&per_page=24', function(error, result){
     if(!!result){
       result.timestamp = new Date().getTime();
-      Days.insert(result);
+      Hours.insert(result);
     }
   });
 }
