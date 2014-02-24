@@ -1,6 +1,6 @@
 Template.grid.helpers({
   hours: function () {
-    return Hours.find({}, {sort: {timestamp: -1}, limit: 24});
+    return Hours.find({}, {sort: {timestamp: -1}, limit: 12});
   },
   date: function () {
     var d = new Date(this.timestamp);
